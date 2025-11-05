@@ -1,0 +1,435 @@
+<!DOCTYPE html><html ><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>صالون روعه الجمال الوردي</title><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet"><style>
+  
+:root{
+  
+  --bg:#fff;
+  
+  --text:#222;
+  
+  --card:#ffffff;
+  
+  --muted:#f6f6f8;
+  
+  --accent:#ff66a3;
+  
+  --accent-2:#ff2e78;
+  
+  --shadow:0 8px 30px rgba(0,0,0,0.08);
+  
+}
+  
+
+  
+/* Dark Mode */
+  
+.dark {
+  
+  --bg:#0d0d0d;
+  
+  --text:#fff;
+  
+  --card:#1a1a1a;
+  
+  --muted:#222;
+  
+  --shadow:0 8px 30px rgba(255,255,255,0.05);
+  
+}
+  
+
+  
+body{
+  
+  margin:0;
+  
+  font-family:'Cairo',sans-serif;
+  
+  background:var(--bg);
+  
+  color:var(--text);
+  
+}
+  
+
+  
+header{
+  
+  padding:15px 20px;
+  
+  display:flex;
+  
+  justify-content:space-between;
+  
+  backdrop-filter:blur(6px);
+  
+  position:sticky;top:0;z-index:10;
+  
+  background:rgba(255,255,255,0.75);
+  
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  
+}
+  
+.dark header{background:rgba(0,0,0,0.65);}
+  
+
+  
+.logo{
+  
+  display:flex;align-items:center;gap:12px
+  
+}
+  
+
+  
+.logo-mark{
+  
+  width:75px;height:75px;border-radius:50%;overflow:hidden;
+  
+  border:3px solid var(--accent);
+  
+}
+  
+.logo-mark img{width:100%;height:100%;object-fit:cover;}
+  
+
+  
+.container{
+  
+  max-width:1100px;margin:auto;padding:20px;
+  
+}
+  
+
+  
+/* Gallery cards */
+  
+.gallery{
+  
+  display:grid;
+  
+  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+  
+  gap:14px;
+  
+}
+  
+
+  
+.media-card{
+  
+  background:var(--card);
+  
+  border-radius:14px;
+  
+  box-shadow:var(--shadow);
+  
+  overflow:hidden;
+  
+  aspect-ratio:1/1;
+  
+  position:relative;
+  
+}
+  
+
+  
+.media-card img,
+  
+.media-card video{
+  
+  width:100%;height:100%;object-fit:cover;
+  
+}
+  
+
+  
+.media-card .meta{
+  
+  position:absolute;bottom:0;width:100%;
+  
+  background:linear-gradient(0deg,rgba(0,0,0,0.7),transparent);
+  
+  color:#fff;padding:6px 10px;font-size:13px;
+  
+}
+  
+
+  
+/* Social Buttons */
+  
+.social-box{
+  
+  padding:15px;
+  
+  background:var(--card);
+  
+  border-radius:14px;
+  
+  box-shadow:var(--shadow);
+  
+  margin-top:20px;
+  
+}
+  
+
+  
+.social-box h3{margin:0 0 10px;}
+  
+.social-btn{
+  
+  width:100%;
+  
+  display:flex;
+  
+  align-items:center;
+  
+  gap:10px;
+  
+  padding:12px;
+  
+  border-radius:40px;
+  
+  font-weight:700;
+  
+  text-decoration:none;
+  
+  margin-bottom:10px;
+  
+  justify-content:center;
+  
+  transition:.2s;
+  
+  background:var(--muted);
+  
+  color:var(--text);
+  
+}
+  
+.social-btn:hover{
+  
+  background:var(--accent);
+  
+  color:#fff;
+  
+}
+  
+
+  
+.social-btn img{width:22px;height:22px}
+  
+
+  
+/* Toggle dark mode */
+  
+.mode-btn{
+  
+  background:var(--accent);
+  
+  color:#fff;
+  
+  border:0;
+  
+  padding:10px 14px;
+  
+  border-radius:10px;
+  
+  font-weight:bold;
+  
+  cursor:pointer;
+  
+}
+  
+
+  
+/* Loader Animation */
+  
+.loader {
+  
+  width:100%;
+  
+  display:flex;
+  
+  justify-content:center;
+  
+  margin-top:40px;
+  
+  margin-bottom:40px;
+  
+}
+  
+
+  
+.loader div {
+  
+  width:14px;
+  
+  height:14px;
+  
+  margin:5px;
+  
+  background:#ff2e78;
+  
+  border-radius:50%;
+  
+  animation: bounce 0.6s infinite alternate;
+  
+}
+  
+
+  
+.loader div:nth-child(2) { animation-delay:0.2s; }
+  
+.loader div:nth-child(3) { animation-delay:0.4s; }
+  
+
+  
+@keyframes bounce {
+  
+  to { transform: translateY(-12px); opacity:0.4; }
+  
+}
+  
+
+  
+
+  
+
+  
+
+  
+</style></head><body><header>  <div class="logo"><div class="logo-mark"><img src="https://i.ibb.co/fVdzzD7G/1761950323059.jpg"></div>
+
+<div>
+
+  <div style="font-weight:800;font-size:18px">صالون روعه الجمال الوردي</div>
+
+  <small>تجميل — ستايل فاخر</small>
+
+</div>
+
+  </div><button class="mode-btn" onclick="toggleDark()">🌙 / ☀️</button>
+
+</header><div class="container"><h2>المعرض</h2><!-- Loader --><div id="loader" class="loader">  <div></div><div></div><div></div></div><!-- Gallery --><div id="gallery" class="gallery"></div><div class="social-box">  <h3>تواصل معنا</h3>  <a class="social-btn" id="waLink" target="_blank" href="https://wa.me/96893010040"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536445.png"> واتساب
+
+  </a>  <a class="social-btn" id="instaLink" target="_blank" href="https://www.instagram.com/pink_beauty_muscat/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"> انستجرام
+
+  </a>  <a class="social-btn" id="mapLink" target="_blank" href="https://goo.gl/maps/qadKySJQuYJ2/"><img src="https://cdn-icons-png.flaticon.com/512/535/535239.png"> موقعنا على الخريطة
+
+  </a></div></div><!-- Supabase --><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script><script>
+  
+const supabaseUrl = "https://sdbpdzyvnbbewokujreg.supabase.co";
+  
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNkYnBkenl2bmJiZXdva3VqcmVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE1NDI2NTEsImV4cCI6MjA3NzExODY1MX0.L2_MS_vE-n0V77Z7s-jvjDuNNu5ulx_ah3OrenImIkM";
+  
+const client = supabase.createClient(supabaseUrl, supabaseKey);
+  
+
+  
+async function loadGallery() {
+  
+  // Show loader, hide gallery
+  
+  document.getElementById("loader").style.display = "flex";
+  
+  document.getElementById("gallery").style.display = "none";
+  
+
+  
+  const { data, error } = await client
+  
+    .from('media')
+  
+    .select('file_url, file_type, title')
+  
+    .order('id', { ascending: false });
+  
+
+  
+  const box = document.getElementById("gallery");
+  
+  box.innerHTML = "";
+  
+
+  
+  if (error) {
+  
+    console.error("Error fetching media:", error);
+  
+    box.innerHTML = "<p style='text-align:center;color:#999'>❌ خطأ في جلب الوسائط.</p>";
+  
+  }
+  
+
+  
+  if (!data || data.length === 0) {
+  
+    box.innerHTML = "<p style='text-align:center;color:#999'>لا توجد وسائط حالياً.</p>";
+  
+  } else {
+  
+    data.forEach(item => {
+  
+      const card = document.createElement("div");
+  
+      card.className = "media-card";
+  
+
+  
+      const isVideo = item.file_type === 'video' || 
+  
+        (item.file_url && item.file_url.match(/\.(mp4|webm|mov)$/i));
+  
+
+  
+      card.innerHTML = isVideo
+  
+        ? `<video controls src="${item.file_url}"></video>`
+  
+        : `<img src="${item.file_url}" />`;
+  
+
+  
+      if (item.title) {
+  
+        const meta = document.createElement("div");
+  
+        meta.className = "meta";
+  
+        meta.textContent = item.title;
+  
+        card.appendChild(meta);
+  
+      }
+  
+
+  
+      box.appendChild(card);
+  
+    });
+  
+  }
+  
+
+  
+  // Hide loader, show gallery
+  
+  document.getElementById("loader").style.display = "none";
+  
+  document.getElementById("gallery").style.display = "grid";
+  
+}
+  
+
+  
+loadGallery();
+  
+
+  
+function toggleDark() {
+  
+  document.body.classList.toggle("dark");
+  
+}
+  
+</script></body></html>
