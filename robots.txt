@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: vocal-lebkuchen-5dd12d.netlify.app/sitemap.xml
+Sitemap: https://vocal-lebkuchen-5dd12d.netlify.app//sitemap.xml
