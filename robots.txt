@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moonlit-kashata-a3c556.netlify.app/sitemap.xml
