@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://moonlit-kashata-a3c556.netlify.app/sitemap.xml
+Sitemap: vocal-lebkuchen-5dd12d.netlify.app/sitemap.xml
