@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://inspiring-fudge-e2d3f3.netlify.app/sitemap.xml
